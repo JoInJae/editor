@@ -1,0 +1,11 @@
+spring:
+  devtools:
+    livereload:
+      enabled: true
+  thymeleaf:
+    cache: false
+  datasource:
+    url: jdbc:mysql://localhost:3306/test?characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Seoul&amp&allowPublicKeyRetrieval=true&useSSL=false
+    username: root
+    password: rowan0810
+    driver-class-name: com.mysql.cj.jdbc.Driver
