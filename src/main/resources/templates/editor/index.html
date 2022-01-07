@@ -3,22 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <title>캔버스 활용법</title>
+    <style>
+        .editor-wrap{
+            display: flex
+        }
+        .editor-wrap>.editor-canvas{
+            border: 1px solid gray;
+            margin: 0 10px 0 0;
+        }
+        .editor-wrap>.editor-input-form{
+            display: flex;
+            flex-direction: column;
+            width: 120px;
+        }
+        .editor-wrap>.editor-input-form>.editor-input{
+            display: flex;
+            padding: 5px;
+            border: 1px solid black;
+            margin: 0 0 5px 0;
+        }
+        .editor-wrap>.editor-input-form>.editor-input>input{
+            width: 100%;
+            border: 0;
+            padding: 0;
+            line-height: 24px;
+            font-size: 12px;
+            outline: none;
+        }
+        .editor-wrap>.editor-input-form>.editor-input>span{
+            display: block;
+            line-height: 24px;
+            font-size: 12px;
+        }
+        .editor-wrap>.editor-input-form>.editor-btn-create{
+            border: 1px solid cornflowerblue;
+            padding: 10px;
+            background-color: cornflowerblue;
+            color:white;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <canvas id="canvas" style="background-color: red; width: 1000px; height: 500px">
-    </canvas>
+    <div class="editor-wrap">
+        <canvas id="canvas" class="editor-canvas"></canvas>
+        <form name="editorFrom" class="editor-input-form">
+            <label class="editor-input">
+                <input type="text" id="width" name="width_" placeholder="가로"><span>px</span>
+            </label>
+            <label class="editor-input">
+                <input type="text" id="height" name="height_" placeholder="세로"><span>px</span>
+            </label>
+            <label class="editor-input">
+                <input type="text" id="x" name="x_dir" placeholder="x좌표"><span>px</span>
+            </label>
+            <label class="editor-input">
+                <input type="text" id="y" name="y_dir" placeholder="y좌표"><span>px</span>
+            </label>
+            <button type="button" class="editor-btn-create" onclick="createRect()">생성하기</button>
+        </form>
+    </div>
+    <script src="/static/js/canvas.js"></script>
     <script>
-        const canvas = document.getElementById('canvas');
-        const ctx = canvas.getContext("2d");
-
-        let rec = {
-            x: 10,
-            y: 10,
-            width: 50,
-            height: 50,
-            draw
-        }
-
+        /*<![CDATA[*/
+            let content = /*[[${content.data}]]*/ null;
+        /*]]>*/
     </script>
 </body>
 </html>
